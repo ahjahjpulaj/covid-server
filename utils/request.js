@@ -16,7 +16,7 @@ module.exports = url => {
         response.on("end", () => {
           try {
             // let res = { list: body };
-            let json = JSON.parse(body.substring(1));
+            let json = JSON.parse(body);
             resolve(json);
           } catch (error) {
             console.error(error.message);
